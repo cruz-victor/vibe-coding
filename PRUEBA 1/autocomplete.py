@@ -1,7 +1,10 @@
-def fizzbuzz(n): 
+def cursorbuzz(n, max_n): 
+    if n > max_n:
+        print(f"Error: el valor de n ({n}) excede el máximo permitido ({max_n}).")
+        return
     for i in range(1, n+1):
         if i % 3 == 0 and i % 5 == 0:
-            print("Fizzbuzz")
+            print("Cursorbuzz")
         elif i % 3 == 0:
             print("Fizz")
         elif i % 5 == 0:
@@ -9,5 +12,5 @@ def fizzbuzz(n):
         else:
             print(i)
 
-
-fizzbuzz(100)
+# Ejemplo de uso
+cursorbuzz(100, 150)
