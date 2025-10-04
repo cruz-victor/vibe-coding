@@ -1,0 +1,26 @@
+[project]
+name = "poc-2"
+version = "0.1.0"
+description = "POC FastAPI con estructura base"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+  "fastapi>=0.111.0",
+  "uvicorn[standard]>=0.30.0",
+  "python-dotenv>=1.0.1",
+  "pydantic>=2.8.0",
+]
+
+[build-system]
+requires = ["hatchling>=1.25.0"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build]
+packages = [
+  { include = "app", from = "src" },
+]
+
+[tool.uv]
+dev = "uvicorn app.main:app --reload --host 0.0.0.0 --port 8000"
+start = "uvicorn app.main:app --host 0.0.0.0 --port 8000"
+
