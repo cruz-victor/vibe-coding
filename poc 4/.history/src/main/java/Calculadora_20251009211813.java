@@ -92,7 +92,7 @@ public class Calculadora {
     }
     
     /**
-     * Método principal para probar las funciones de suma, resta, multiplicación y división
+     * Método principal para probar las funciones de suma y resta
      * @param args Argumentos de línea de comandos
      */
     public static void main(String[] args) {
@@ -122,41 +122,6 @@ public class Calculadora {
         int resultado6 = restar(3, 8);
         System.out.println("Resta de 3 - 8 = " + resultado6);
         
-        System.out.println("\n=== PRUEBAS DE MULTIPLICACIÓN ===");
-        // Pruebas de multiplicación con números enteros
-        int resultado7 = multiplicar(4, 6);
-        System.out.println("Multiplicación de 4 * 6 = " + resultado7);
-        
-        // Pruebas de multiplicación con números decimales
-        double resultado8 = multiplicar(2.5, 3.2);
-        System.out.println("Multiplicación de 2.5 * 3.2 = " + resultado8);
-        
-        // Prueba de multiplicación con números negativos
-        int resultado9 = multiplicar(-5, 3);
-        System.out.println("Multiplicación de -5 * 3 = " + resultado9);
-        
-        System.out.println("\n=== PRUEBAS DE DIVISIÓN ===");
-        // Pruebas de división con números enteros
-        int resultado10 = dividir(15, 3);
-        System.out.println("División de 15 / 3 = " + resultado10);
-        
-        // Pruebas de división con números decimales
-        double resultado11 = dividir(7.5, 2.5);
-        System.out.println("División de 7.5 / 2.5 = " + resultado11);
-        
-        // Prueba de división con números negativos
-        double resultado12 = dividir(-12.0, 4.0);
-        System.out.println("División de -12.0 / 4.0 = " + resultado12);
-        
-        // Prueba de manejo de división por cero
-        try {
-            int resultado13 = dividir(10, 0);
-            System.out.println("División de 10 / 0 = " + resultado13);
-        } catch (ArithmeticException e) {
-            System.out.println("Error capturado: " + e.getMessage());
-        }
-        
-        System.out.println("\n=== PRUEBA INTERACTIVA ===");
         // Prueba interactiva
         if (args.length >= 2) {
             try {
