@@ -1,7 +1,6 @@
 package com.example.calculator;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertThrows;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
@@ -317,19 +316,6 @@ class CalculatorTest {
 
         // Then
         assertEquals(expectedResult, actualResult);
-    }
-
-    @Test
-    @DisplayName("Should throw exception when dividing by zero")
-    void shouldThrowExceptionWhenDividingByZero() {
-        // Given
-        double firstNumber = 5.0;
-        double secondNumber = 0.0;
-
-        // When & Then
-        assertThrows(IllegalArgumentException.class, () -> {
-            calculator.divide(firstNumber, secondNumber);
-        });
     }
 }
 

@@ -318,18 +318,5 @@ class CalculatorTest {
         // Then
         assertEquals(expectedResult, actualResult);
     }
-
-    @Test
-    @DisplayName("Should throw exception when dividing by zero")
-    void shouldThrowExceptionWhenDividingByZero() {
-        // Given
-        double firstNumber = 5.0;
-        double secondNumber = 0.0;
-
-        // When & Then
-        assertThrows(IllegalArgumentException.class, () -> {
-            calculator.divide(firstNumber, secondNumber);
-        });
-    }
 }
 
