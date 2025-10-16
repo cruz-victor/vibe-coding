@@ -1,0 +1,157 @@
+import java.util.Scanner;
+
+/**
+ * Calculadora básica que permite realizar operaciones matemáticas básicas
+ * Incluye suma de dos números, suma de tres números, resta, multiplicación, división y potencia
+ */
+public class Calculadora {
+    
+    /**
+     * Método para sumar dos números
+     * @param numero1 Primer número a sumar
+     * @param numero2 Segundo número a sumar
+     * @return La suma de los dos números
+     */
+    public double sumar(double numero1, double numero2) {
+        return numero1 + numero2;
+    }
+    
+    /**
+     * Método para sumar tres números
+     * @param numero1 Primer número a sumar
+     * @param numero2 Segundo número a sumar
+     * @param numero3 Tercer número a sumar
+     * @return La suma de los tres números
+     */
+    public double sumarTresNumeros(double numero1, double numero2, double numero3) {
+        return numero1 + numero2 + numero3;
+    }
+    
+    /**
+     * Método para restar dos números
+     * @param numero1 Primer número (minuendo)
+     * @param numero2 Segundo número (sustraendo)
+     * @return La diferencia de los dos números
+     */
+    public double restar(double numero1, double numero2) {
+        return numero1 - numero2;
+    }
+    
+    /**
+     * Método para multiplicar dos números
+     * @param numero1 Primer número a multiplicar
+     * @param numero2 Segundo número a multiplicar
+     * @return El producto de los dos números
+     */
+    public double multiplicar(double numero1, double numero2) {
+        return numero1 * numero2;
+    }
+    
+    /**
+     * Método para dividir dos números
+     * @param numero1 Primer número (dividendo)
+     * @param numero2 Segundo número (divisor)
+     * @return El cociente de los dos números
+     * @throws IllegalArgumentException si el divisor es cero
+     */
+    public double dividir(double numero1, double numero2) {
+        if (numero2 == 0) {
+            throw new IllegalArgumentException("Error: No se puede dividir por cero");
+        }
+        return numero1 / numero2;
+    }
+    
+    /**
+     * Método para calcular la potencia de un número elevado a otro
+     * @param base Número base
+     * @param exponente Exponente al cual elevar la base
+     * @return El resultado de base elevado a exponente
+     */
+    public double power(double base, double exponente) {
+        return Math.pow(base, exponente);
+    }
+    
+    /**
+     * Método principal que maneja la interacción con el usuario
+     */
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        Calculadora calculadora = new Calculadora();
+        
+        System.out.println("=== CALCULADORA BÁSICA ===");
+        System.out.println("Esta calculadora puede sumar dos números, sumar tres números, restar, multiplicar, dividir y calcular potencias");
+        System.out.println();
+        
+        try {
+            // Solicitar el primer número
+            System.out.print("Ingresa el primer número: ");
+            double numero1 = scanner.nextDouble();
+            
+            // Solicitar el segundo número
+            System.out.print("Ingresa el segundo número: ");
+            double numero2 = scanner.nextDouble();
+            
+            // Solicitar la operación
+            System.out.println();
+            System.out.println("Selecciona la operación:");
+            System.out.println("1. Sumar dos números (+)");
+            System.out.println("2. Sumar tres números (+++)");
+            System.out.println("3. Restar (-)");
+            System.out.println("4. Multiplicar (*)");
+            System.out.println("5. Dividir (/)");
+            System.out.println("6. Potencia (^)");
+            System.out.print("Ingresa tu opción (1, 2, 3, 4, 5 o 6): ");
+            
+            int opcion = scanner.nextInt();
+            double resultado = 0;
+            String operacion = "";
+            double numero3 = 0;
+            
+            // Si la opción es sumar tres números, solicitar el tercer número
+            if (opcion == 2) {
+                System.out.print("Ingresa el tercer número: ");
+                numero3 = scanner.nextDouble();
+            }
+            
+            // Realizar la operación seleccionada
+            switch (opcion) {
+                case 1:
+                    resultado = calculadora.sumar(numero1, numero2);
+                    operacion = "+";
+                    break;
+                case 2:
+                    resultado = calculadora.restar(numero1, numero2);
+                    operacion = "-";
+                    break;
+                case 3:
+                    resultado = calculadora.multiplicar(numero1, numero2);
+                    operacion = "*";
+                    break;
+                case 4:
+                    resultado = calculadora.dividir(numero1, numero2);
+                    operacion = "/";
+                    break;
+                case 5:
+                    resultado = calculadora.power(numero1, numero2);
+                    operacion = "^";
+                    break;
+                default:
+                    System.out.println("Opción inválida. Se realizará la suma por defecto.");
+                    resultado = calculadora.sumar(numero1, numero2);
+                    operacion = "+";
+                    break;
+            }
+            
+            // Mostrar el resultado
+            System.out.println();
+            System.out.println("El resultado de " + numero1 + " " + operacion + " " + numero2 + " = " + resultado);
+            
+        } catch (IllegalArgumentException e) {
+            System.out.println(e.getMessage());
+        } catch (Exception e) {
+            System.out.println("Error: Por favor ingresa números válidos (enteros o decimales)");
+        } finally {
+            scanner.close();
+        }
+    }
+}

@@ -1,0 +1,29 @@
+---
+alwaysApply: true
+---
+# Java Calculator Guidelines
+
+## Estilo y formato
+- Usa las convenciones de estilo de código Java (Google Java Style o similares).
+- No uses abreviaturas en nombres de variables, métodos o clases.
+- Cada clase debe tener un único propósito claro.
+
+## Documentación
+- Agrega siempre comentarios Javadoc en todos los métodos públicos y clases.
+- Describe brevemente el propósito de cada método y sus parámetros.
+
+## Errores
+- Cuando ocurra una operación inválida (por ejemplo, división por cero), lanza `IllegalArgumentException` con un mensaje descriptivo.
+
+## Funcionalidad
+- La clase principal se llama `Calculator`.
+- Incluye los métodos: add, subtract, multiply, divide y power.
+- `Main.java` debe ejecutar un ejemplo simple desde consola.
+
+## Testing (futuro)
+- Por ahora no generes pruebas unitarias, pero el código debe ser fácilmente testeable.
+
+## Buenas prácticas
+- Usa tipos primitivos donde sea posible.
+- Evita duplicación de código.
+- Aplica principios básicos de POO.

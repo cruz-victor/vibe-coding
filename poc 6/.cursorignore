@@ -1,0 +1,73 @@
+# Add directories or file patterns to ignore during indexing (e.g. foo/ or *.csv)
+# === Build & Dependencies ===
+target/
+build/
+out/
+.gradle/
+.mvn/
+**/bin/
+**/generated/
+
+# === Maven & Gradle Cache ===
+.mvn/wrapper/maven-wrapper.jar
+.mvn/wrapper/maven-wrapper.properties
+.gradle/
+**/.gradle/
+**/build/
+
+# === IDE Files ===
+.idea/
+.vscode/
+*.iml
+*.ipr
+*.iws
+*.swp
+.DS_Store
+
+# === Logs & Temp Files ===
+logs/
+*.log
+*.tmp
+*.bak
+*.class
+
+# === OS Files ===
+Thumbs.db
+ehthumbs.db
+desktop.ini
+
+# === Test Reports ===
+test-output/
+surefire-reports/
+jacoco.exec
+
+# === Configuration not needed for AI context ===
+.env
+*.env
+*.properties
+*.yml
+*.yaml
+
+# === Git ===
+.git/
+.gitignore
+.gitattributes
+
+# === Node / Frontend (if you have UI module) ===
+node_modules/
+npm-debug.log
+dist/
+build/
+coverage/
+
+# === Docker ===
+docker/
+Dockerfile
+.dockerignore
+
+# === Cursor / Editor internals ===
+.cursorignore
+cursor.log
+
+# === history ===
+.history/
