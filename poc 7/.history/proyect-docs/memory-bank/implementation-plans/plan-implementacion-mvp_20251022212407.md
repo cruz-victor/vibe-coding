@@ -1,0 +1,141 @@
+# 🧭 Plan de Implementación - MVP del Sistema de Gestión de Aprendizaje (LMS)
+
+## 📘 Resumen General
+
+Este documento describe el plan paso a paso para construir el **MVP de un Sistema de Gestión de Aprendizaje (LMS)** utilizando **React + Vite + ShadCN/ui + Tailwind CSS** en el frontend y **Supabase** para el backend (autenticación, base de datos y almacenamiento).  
+El objetivo es tener un ciclo de desarrollo **iterativo y validado continuamente en producción** (Vercel + Supabase).
+
+---
+
+## 🏁 Fase 0: Preparación y Configuración Inicial
+
+### 0.1. Configuración del Repositorio y Estructura Base
+- Crear un nuevo repositorio Git en GitHub o GitLab: `lms-mvp`.
+- Clonar el repositorio localmente y configurar la rama principal (`main` o `production`).
+- Inicializar el proyecto con **Vite + React + TypeScript**.
+- Configurar **Tailwind CSS** y **ShadCN/ui** siguiendo sus guías oficiales.
+- Verificar que la aplicación local se ejecute correctamente (`npm run dev`).
+
+### 0.2. Integración Inicial con Vercel
+- Conectar el repositorio con Vercel.
+- Configurar la primera implementación automática en `main`.
+- Verificar que la aplicación “Hello World” esté en producción.
+  
+📍 **Detente y espera a que implemente y pruebe la aplicación en producción antes de continuar.**
+
+---
+
+## 🔐 Fase 1: Autenticación de Usuarios (Supabase)
+
+### 1.1. Configuración de Supabase
+- Crear un nuevo proyecto en [Supabase.io](https://supabase.io).
+- Configurar las tablas de usuario y roles (Instructor / Estudiante).
+- Activar la autenticación con email y contraseña.
+- Obtener las credenciales del proyecto y añadirlas al `.env` del frontend.
+
+### 1.2. Integración en el Frontend
+- Configurar el cliente de Supabase en React.
+- Crear las vistas: **Registro**, **Inicio de Sesión** y **Perfil**.
+- Añadir navegación condicional (mostrar “Cursos”, “Perfil”, “Cerrar sesión” si está autenticado).
+- Implementar un *contexto global* para gestionar el estado del usuario autenticado.
+
+### 1.3. Validación Básica
+- Probar registro, inicio y cierre de sesión.
+- Validar que se distinguen los roles en la base de datos.
+
+📍 **Detente y espera a que implemente y pruebe la aplicación en producción antes de continuar.**
+
+---
+
+## 📚 Fase 2: Creación y Gestión de Cursos (Rol: Instructor)
+
+### 2.1. Modelo de Datos de Curso
+- Crear tablas en Supabase:
+  - `courses`: título, descripción, estado (publicado/borrador), `instructor_id`.
+  - `modules`: opcional en MVP (permitido pero simple).
+  - `lessons`: título, contenido (texto), `video_url`, `course_id`.
+
+### 2.2. Interfaz para Instructores
+- Crear una vista **“Mis Cursos”** donde el instructor vea y edite sus cursos.
+- Añadir formularios simples para **crear**, **editar** y **eliminar** cursos.
+- Implementar publicación y despublicación de cursos.
+- Validar que solo el instructor propietario puede editar sus cursos.
+
+### 2.3. Sincronización en Producción
+- Verificar creación de cursos y persistencia en Supabase.
+- Probar publicación/despublicación desde el entorno de producción.
+
+📍 **Detente y espera a que implemente y pruebe la aplicación en producción antes de continuar.**
+
+---
+
+## 🎓 Fase 3: Navegación e Inscripción de Estudiantes
+
+### 3.1. Listado de Cursos Públicos
+- Crear una vista **“Cursos”** que muestre todos los cursos publicados.
+- Permitir filtrado o búsqueda básica (por título o instructor).
+
+### 3.2. Sistema de Inscripción
+- Crear tabla `enrollments`: `student_id`, `course_id`, `created_at`.
+- Añadir botón de **“Inscribirse”** para los estudiantes autenticados.
+- Mostrar los cursos inscritos en una vista **“Mis Cursos”** (para estudiantes).
+
+### 3.3. Consumo de Contenido
+- Permitir a los estudiantes abrir un curso inscrito y ver las lecciones.
+- Habilitar el marcado manual de una lección como “completada” (tabla `lesson_progress`).
+- Guardar y mostrar el estado de completado en Supabase.
+
+📍 **Detente y espera a que implemente y pruebe la aplicación en producción antes de continuar.**
+
+---
+
+## 🧩 Fase 4: Interfaz de Usuario y Experiencia
+
+### 4.1. Diseño y Navegación
+- Implementar un **NavigationMenu** superior (ShadCN/ui):
+  - Enlaces dinámicos: `Cursos`, `Mis Cursos`, `Perfil`, `Iniciar Sesión / Cerrar Sesión`.
+- Aplicar tema **modo oscuro primero (dark mode)** y asegurar coherencia visual.
+- Hacer que toda la interfaz sea completamente **responsive** (mobile-first).
+
+### 4.2. Detalles de UX
+- Añadir retroalimentación visual (loaders, toasts, mensajes de error/success).
+- Incluir placeholders para futuras funcionalidades (por ejemplo, “Próximamente: cuestionarios”).
+
+📍 **Detente y espera a que implemente y pruebe la aplicación en producción antes de continuar.**
+
+---
+
+## 🚀 Fase 5: Validación y Estabilización del MVP
+
+### 5.1. Revisión de Flujo Completo
+- Registrar usuario → crear curso (instructor) → publicar → estudiante se inscribe → consume contenido.
+- Verificar autenticación y persistencia correcta en Supabase.
+- Probar todos los flujos principales en dispositivos móviles y escritorio.
+
+### 5.2. Auditoría de Datos y Seguridad
+- Revisar reglas RLS (Row Level Security) en Supabase.
+- Asegurar que los estudiantes no puedan editar cursos y los instructores solo gestionen los suyos.
+
+### 5.3. Despliegue Final del MVP
+- Realizar una implementación de producción estable desde Vercel.
+- Validar la performance y los tiempos de carga iniciales.
+- Preparar lista de mejoras para la siguiente iteración (cuestionarios, progreso automático, recuperación de contraseña, etc.).
+
+📍 **Detente y valida la versión final del MVP en producción antes de planificar la siguiente fase.**
+
+---
+
+## ✅ Resultado Esperado
+
+Al final de este plan, tendrás un **LMS funcional y desplegado en producción** con:
+
+- Autenticación básica (Estudiante / Instructor).
+- Creación y gestión de cursos con lecciones de texto/video.
+- Inscripción de estudiantes y marcado de progreso.
+- Interfaz moderna, responsiva y en modo oscuro.
+- Integración continua entre Supabase (backend) y Vercel (frontend).
+
+---
+
+**Ruta de archivo:**  
+`./memory-bank/implementation.md`

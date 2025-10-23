@@ -1,0 +1,84 @@
+Quiero construir un **Sistema de Gestión de Aprendizaje (LMS) - Primera Iteración (MVP)**.
+
+
+<!-- Descripción General del Proyecto -->
+
+<project_description>
+
+El objetivo general es crear una plataforma donde los instructores puedan crear y gestionar cursos básicos, y los estudiantes puedan inscribirse en estos cursos para aprender y seguir su progreso inicial. Esta es la primera iteración, enfocándose en la funcionalidad principal.
+
+</project_description>
+
+
+<!-- Público Objetivo -->
+
+<target_audience>
+
+Nuestro público objetivo principal para este MVP son **estudiantes universitarios (18-22 años)** que buscan materiales de aprendizaje complementarios y se sienten muy cómodos con las interfaces web y móviles modernas. Un público secundario son los **instructores independientes** que necesitan una plataforma sencilla para compartir sus conocimientos.
+
+</target_audience>
+
+
+<!-- Tecnologías -->
+
+<technologies>
+
+- **Frontend:** React con Vite, usando ShadCN/ui y Tailwind CSS para componentes y estilos. <!-- Pila VRSS -->
+
+- **Backend y Base de Datos:** Supabase (para autenticación de usuarios, base de datos y potencialmente almacenamiento más adelante).
+
+- **Despliegue:** Vercel para el frontend y Supabase para los servicios de backend.
+
+</technologies>
+
+
+<!-- Descripción de la Funcionalidad - MVP -->
+
+<functionalities_mvp>
+
+**Roles de Usuario Clave para MVP:**
+
+1.  **Estudiante:** Puede registrarse, iniciar sesión, explorar/inscribirse en cursos, ver contenido de lecciones de texto/video y marcar manualmente las lecciones como completadas.
+
+2.  **Instructor:** Puede registrarse, iniciar sesión, crear/editar cursos básicos (título, descripción), agregar lecciones con texto y enlaces de video, y publicar/despublicar cursos.
+
+
+**Funcionalidades Principales para esta iteración MVP:**
+
+*   **Autenticación de Usuario:** Registro de Estudiante e Instructor, inicio de sesión, cierre de sesión. (Posponer la recuperación de contraseña para la siguiente iteración si complica el MVP).
+
+*   **Creación de Cursos (Instructor):** Capacidad para crear cursos con un título y descripción. Organizar contenido en módulos y lecciones simples (contenido de texto e incrustaciones de video de YouTube inicialmente).
+
+*   **Inscripción y Consumo de Cursos (Estudiante):** Los estudiantes pueden ver una lista de cursos publicados, inscribirse en un curso y ver sus lecciones. Pueden marcar manualmente las lecciones como 'completas'.
+
+*   **Sin cuestionarios ni seguimiento avanzado del progreso en este MVP.** <!-- Pospóner explícitamente características -->
+
+</functionalities_mvp>
+
+
+<!-- Mejores Prácticas de Front-end -->
+
+<frontend_practices>
+
+- **Estilo General:** Diseño moderno, limpio y minimalista. Priorizar una estética de **modo oscuro primero** 🌙, asegurando que sea elegante y fácil de usar para nuestro público objetivo de estudiantes universitarios.
+
+- **Capacidad de Respuesta:** La aplicación debe ser totalmente responsiva 📱💻, luciendo genial en dispositivos móviles, tabletas y computadoras de escritorio. Usar componentes ShadCN/ui con Tailwind CSS para asegurar esto, enfocándose en un enfoque mobile-first para la estructura central.
+
+- **Navegación:** Para el MVP, una barra de navegación superior simple usando `NavigationMenu` de ShadCN/ui con enlaces como 'Cursos' y perfil de usuario/inicio de sesión/cierre de sesión.
+
+</frontend_practices>
+
+
+<!-- API y Estrategia de Despliegue -->
+
+<api_and_deployment>
+
+Alojaremos el frontend en **Vercel** y usaremos **Supabase** para la base de datos y la autenticación.
+
+
+Escribe un archivo markdown con el **plan de implementación** para este MVP de LMS. No incluyas ningún ejemplo de código en el plan mismo. Divide el plan de implementación en pasos pequeños y procesables y guárdalo en `./memory-bank/implementation.md`.
+
+
+**Fundamentalmente, prioriza el plan con pasos para sincronizar e implementar en Vercel tan a menudo como sea posible.** Por ejemplo, incluye un paso específicamente para implementar un "Hola Mundo" básico o una estructura mínima de aplicación en producción (Vercel) justo después de la configuración inicial del proyecto y algunos pasos fundamentales. Después de cada conjunto significativo de características (como autenticación de usuario, luego conceptos básicos de creación de cursos), incluye un paso para implementar y declara explícitamente: **"Detente y espera a que implemente y pruebe la aplicación en producción antes de continuar."** <!-- Esto asegura retroalimentación iterativa y reduce el riesgo -->
+
+</api_and_deployment>
