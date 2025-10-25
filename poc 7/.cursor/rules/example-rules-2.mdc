@@ -1,0 +1,27 @@
+---
+alwaysApply: true
+---
+# Objetivo
+
+Errores y reconexión consistentes en WebSocket (chat).
+
+
+# Convenciones (por qué)
+
+- `onerror` + `onclose` (visibilidad y estabilidad).
+
+- Backoff exponencial máx. 30s (evita loops agresivos).
+
+- Conexión encapsulada (evita estado global frágil).
+
+
+# ✅ Correcto
+
+const socket = new WebSocket(URL);
+
+socket.onerror = (err) => { log('ws_error', err); attemptReconnect(); };
+
+
+# ❌ Incorrecto
+
+Solo `console.error` sin reconexión ni encapsulación.

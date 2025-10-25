@@ -1,0 +1,41 @@
+---
+alwaysApply: true
+---
+
+# Objetivo
+
+Estandarizar endpoints REST con respuestas consistentes.
+
+
+# Convenciones
+
+- Responder JSON con `{ data, error }`.
+
+- Errores con `code` y `message`.
+
+- Evitar lógica de negocio en el controlador; delegar a servicios.
+
+
+
+# ✅ Correcto
+
+router.get('/users/:id', async (req, res) => {
+
+  try {
+
+    const user = await svc.getUser(req.params.id);
+
+    return res.json({ data: user, error: null });
+
+  } catch (e) {
+
+    return res.status(400).json({ data: null, error: { code: 'USER_GET_FAILED', message: String(e) } });
+
+  }
+
+});
+
+
+# ❌ Incorrecto
+
+Responder `{ result }` en un endpoint y `{ payload }` en otro.
