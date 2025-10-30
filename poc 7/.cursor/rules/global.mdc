@@ -1,0 +1,21 @@
+---
+name: global-rules
+description: Reglas generales aplicables a todos los microservicios del sistema.
+tags: [global, backend, springboot, java]
+alwaysApply: true
+---
+
+# 🌐 Reglas Globales
+
+- El proyecto debe utilizar **Java 17 o superior**.
+- Todas las dependencias deben gestionarse con **Maven**, según el estándar del equipo.
+- Usa `Lombok` para evitar código repetitivo (`@Getter`, `@Setter`, `@Builder`).
+- Los logs deben realizarse con **SLF4J** (`@Slf4j` o `LoggerFactory`).
+- Ningún archivo debe contener `System.out.println`.
+- Los nombres de paquetes siguen la convención: ubicuosoft.meter-service.meter (<empresa>.<nombre-servicio>.<módulo>)
+- Cada microservicio debe tener un archivo `README.md` que incluya:
+    - Descripción
+    - Dependencias externas
+    - Variables de entorno
+    - Cómo ejecutar pruebas
+

@@ -1,0 +1,20 @@
+---
+extends: ./documentation.mdc
+name: readme-guidelines
+description: Guía para escribir archivos README coherentes.
+tags: [docs, readme]
+alwaysApply: true
+---
+
+# 📝 README Guidelines
+
+Cada microservicio debe tener un `README.md` con las siguientes secciones:
+
+1. 🧭 Descripción general
+2. ⚙️ Requisitos previos
+3. 🚀 Cómo ejecutar el servicio
+4. 🔗 Endpoints principales
+5. 🧪 Cómo ejecutar pruebas
+6. 👥 Autores y contacto
+
+Los ejemplos deben usar **Postman**.

@@ -1,0 +1,22 @@
+---
+extends: ../global.mdc
+name: backend-architecture
+description: Reglas para la arquitectura limpia de los microservicios Java Spring Boot.
+tags: [architecture, clean-architecture, backend]
+alwaysApply: true
+---
+
+# 🧱 Arquitectura del Backend
+
+- Usa el patrón **Arquitectura Limpia**:
+```
+     src/main/java/com/empresa/servicio/
+    ├─ api/ → controladores REST, DTOs
+    ├─ application/ → lógica de negocio, casos de uso
+    ├─ domain/ → entidades, interfaces del dominio
+    ├─ infrastructure/ → adaptadores, persistencia, configuración    
+```
+- Ninguna clase del `domain` debe depender de `infrastructure`.
+- Los controladores deben ser delgados, sin lógica de negocio.
+- Los `services` son responsables de coordinar lógica y repositorios.
+- No deben existir llamadas entre controladores directamente.

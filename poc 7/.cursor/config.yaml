@@ -1,0 +1,4 @@
+rules_path: .cursor/rules
+language: java
+framework: springboot
+default_apply: [global, backend, api, database]

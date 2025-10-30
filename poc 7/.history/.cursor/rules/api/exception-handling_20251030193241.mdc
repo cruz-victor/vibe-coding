@@ -1,0 +1,22 @@
+---
+extends: ./controllers.mdc
+name: api-exception-handling
+description: Manejo unificado de errores y excepciones.
+tags: [api, error, exception]
+alwaysApply: true
+---
+
+# 🚨 Exception Handling
+
+- Implementar un `@ControllerAdvice` global.
+- Las excepciones personalizadas deben extender `RuntimeException`.
+- Devuelve un objeto de error estandarizado:
+  ```json
+  {
+    "timestamp": "2025-10-30T12:00:00Z",
+    "status": 404,
+    "error": "Not Found",
+    "message": "User not found"
+  }
+  ```
+  

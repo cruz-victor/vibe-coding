@@ -1,0 +1,16 @@
+---
+extends: ../backend/conventions.mdc
+name: api-controllers
+description: Buenas prácticas para controladores REST.
+tags: [api, rest, controller]
+alwaysApply: true
+---
+
+# 🌐 Controladores REST
+
+- Usa `@RestController` y `@RequestMapping("/api/...")`.
+- Los endpoints deben devolver `ResponseEntity<T>`.
+- Usa `@GetMapping`, `@PostMapping`, `@PutMapping`, `@DeleteMapping` según el verbo HTTP.
+- Evita colocar lógica de negocio en controladores.
+- Cada método debe delegar al servicio correspondiente.
+- Maneja errores con un `@ControllerAdvice` global.

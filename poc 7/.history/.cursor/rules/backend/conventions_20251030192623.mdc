@@ -1,0 +1,16 @@
+---
+extends: ./naming.mdc
+name: backend-conventions
+description: Buenas prácticas generales para código backend en Spring Boot.
+tags: [conventions, code-style, backend]
+alwaysApply: true
+---
+
+# ⚙️ Convenciones de Código
+
+- Sigue el estándar **Google Java Style Guide**.
+- Declara constantes en una clase `Constants.java`.
+- Usa `@Value` o `@ConfigurationProperties` para valores configurables.
+- Los métodos públicos deben tener javadoc breve explicando su propósito.
+- Los endpoints deben documentarse con **Swagger/OpenAPI**.
+- Evita el uso de clases utilitarias estáticas, prefiere beans Spring.

@@ -1,0 +1,15 @@
+---
+
+---
+
+---
+extends: ../global.mdc
+name: backend-architecture
+description: Reglas para la arquitectura limpia de los microservicios Java Spring Boot.
+tags: [architecture, clean-architecture, backend]
+alwaysApply: true
+---
+
+# 🧱 Arquitectura del Backend
+
+- Usa el patrón **Arquitectura Limpia / Hexagonal**:

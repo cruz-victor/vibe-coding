@@ -1,0 +1,18 @@
+---
+extends: ../global.mdc
+name: documentation
+description: Lineamientos para documentación técnica.
+tags: [docs, documentation]
+alwaysApply: true
+---
+
+# 📖 Documentation Rules
+
+- Toda clase pública debe tener un comentario JavaDoc.
+- Las APIs deben documentarse con **Springdoc OpenAPI** (`@Operation`, `@Schema`).
+- Los `README.md` deben incluir:
+  - Descripción del servicio
+  - Diagrama de arquitectura
+  - Variables de entorno
+  - Ejemplo de ejecución local
+

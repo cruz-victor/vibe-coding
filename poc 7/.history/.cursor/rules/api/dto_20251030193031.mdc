@@ -1,0 +1,15 @@
+---
+extends: ./controllers.mdc
+name: api-dto
+description: Reglas para la creación y uso de DTOs (Data Transfer Objects).
+tags: [api, dto, data]
+alwaysApply: true
+---
+
+# 📦 DTO Rules
+
+- Usa clases `@Data` de Lombok.
+- Los DTOs de entrada deben terminar con `Request`, los de salida con `Response`.
+- Valida los campos con `javax.validation` (`@NotNull`, `@Email`, etc.).
+- Los nombres de atributos deben coincidir con los del modelo de dominio cuando sea posible.
+- No exponer entidades directamente a la API.

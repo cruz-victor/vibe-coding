@@ -1,0 +1,16 @@
+---
+extends: ./jpa.mdc
+name: database-repository
+description: Reglas para repositorios Spring Data JPA.
+tags: [database, repository, spring-data]
+alwaysApply: true
+---
+
+# 📚 Repository Rules
+
+- Todos los repositorios deben extender `JpaRepository` o `CrudRepository`.
+- Los nombres de los métodos deben seguir las convenciones:
+  - `findBy`, `existsBy`, `deleteBy`, `countBy`.
+- No escribir SQL manual si se puede expresar con Query Methods.
+- Si se requiere una consulta compleja, usar `@Query` con JPQL.
+- Evitar usar `nativeQuery = true` salvo casos justificados.
