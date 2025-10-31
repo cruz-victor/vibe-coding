@@ -1,0 +1,12 @@
+---
+title: "Testing Rules"
+tags: [testing, unit, integration]
+alwaysApply: true
+---
+# Pruebas
+
+- Pruebas unitarias en `src/test/java`.
+- Pruebas de integración en `src/integration-test`.
+- Frameworks: **JUnit 5**, **Mockito**, **Testcontainers**.
+- Cobertura mínima: **80%**.
+

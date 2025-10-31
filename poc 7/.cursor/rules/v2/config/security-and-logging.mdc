@@ -1,0 +1,10 @@
+---
+title: "Security and Logging"
+tags: [security, logging]
+alwaysApply: true
+---
+# Seguridad y Logging
+
+- Usa `Spring Security` con JWT.
+- No exponer endpoints sin autenticación salvo `/auth/login` o `/health`.
+- Configura logs con SLF4J y logback.xml.

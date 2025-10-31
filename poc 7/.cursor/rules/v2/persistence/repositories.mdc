@@ -1,0 +1,10 @@
+---
+title: "Repositories"
+tags: [persistence, repository]
+alwaysApply: true
+---
+# Repositorios
+
+- Usa `Spring Data JPA` o `MongoRepository`.
+- Los métodos deben seguir la convención: `findBy...`, `existsBy...`, `countBy...`.
+- No incluir lógica de negocio.

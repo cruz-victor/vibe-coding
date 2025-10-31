@@ -1,0 +1,10 @@
+---
+title: "Value Objects and Events"
+tags: [domain, value-object, event]
+alwaysApply: true
+---
+# Objetos de Valor y Eventos
+
+- Los Value Objects deben ser inmutables.
+- Implementa `equals` y `hashCode`.
+- Los eventos deben extender `ApplicationEvent` y publicarse con `ApplicationEventPublisher`.

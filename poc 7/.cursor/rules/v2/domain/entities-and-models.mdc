@@ -1,0 +1,10 @@
+---
+title: "Entities and Models"
+tags: [domain, model]
+alwaysApply: true
+---
+# Entidades y Modelos
+
+- Las entidades son clases JPA (`@Entity`) o documentos Mongo (`@Document`).
+- No deben depender de frameworks fuera de persistencia.
+- Incluye solo atributos relevantes del dominio.

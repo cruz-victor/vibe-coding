@@ -1,0 +1,11 @@
+---
+title: "Documentation"
+tags: [docs, swagger]
+alwaysApply: true
+---
+# Documentación
+
+- Usa **SpringDoc OpenAPI** (`springdoc-openapi-ui`).
+- URL base de docs: `/swagger-ui.html`.
+- Documenta cada endpoint con `@Operation` y `@Schema`.
+

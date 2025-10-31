@@ -1,0 +1,10 @@
+---
+title: "Deployment"
+tags: [infra, deployment]
+alwaysApply: true
+---
+# Despliegue
+
+- Construir imágenes Docker con multi-stage.
+- Variables de entorno definidas en `.env` o Kubernetes secrets.
+- No incluir secretos en el repositorio.
