@@ -1,0 +1,10 @@
+---
+title: "Scheduling"
+tags: [scheduler, cron]
+alwaysApply: true
+---
+# Tareas Programadas
+
+- Usa `@Scheduled` con expresiones CRON.
+- Evita lógica compleja dentro del método agendado.
+- Si hay múltiples tareas, separarlas por clase.

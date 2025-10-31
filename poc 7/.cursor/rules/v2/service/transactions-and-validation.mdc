@@ -1,0 +1,10 @@
+---
+title: "Transactions & Validation"
+tags: [transactions, validation]
+alwaysApply: true
+---
+# Transacciones y Validación
+
+- Usa `@Transactional` solo en métodos de servicio.
+- La validación ocurre antes de ejecutar operaciones de escritura.
+- Nunca combines operaciones de lectura y escritura en una misma transacción.

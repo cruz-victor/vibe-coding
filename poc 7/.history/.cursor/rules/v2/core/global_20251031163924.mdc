@@ -1,0 +1,15 @@
+---
+title: "Global Rules"
+description: "Reglas globales aplicadas a todo el backend"
+tags: [core, global]
+alwaysApply: true
+---
+# Reglas Globales
+
+- Usa Java 21+ y Spring Boot 3.x.
+- Sigue arquitectura en capas: **API → Service → Domain → Persistence**.
+- Todo código debe estar cubierto por pruebas unitarias mínimas del **80%**.
+- El lenguaje de los comentarios y documentación debe ser **inglés técnico**.
+- Evita lógica de negocio en controladores o repositorios.
+- Utiliza **Lombok** solo en entidades o DTOs, nunca en clases de dominio ricas.
+- Aplica **SOLID, Clean Code, DDD y Hexagonal Architecture**.

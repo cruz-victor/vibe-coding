@@ -1,0 +1,14 @@
+---
+title: "Naming and Code Conventions"
+tags: [naming, conventions]
+alwaysApply: true
+---
+# Convenciones
+
+- Paquetes en minúsculas, sin guiones.
+- Clases: `PascalCase`, variables: `camelCase`, constantes: `UPPER_SNAKE_CASE`.
+- Usa `@Slf4j` para logging.
+- Nombres de métodos deben describir su propósito: `findByUserId`, `calculateTotal`.
+- No dejar código comentado.
+- Los commits siguen formato **Conventional Commits**.
+

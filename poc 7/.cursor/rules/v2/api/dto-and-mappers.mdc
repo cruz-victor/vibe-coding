@@ -1,0 +1,11 @@
+---
+title: "DTOs and Mappers"
+tags: [dto, mapper]
+alwaysApply: true
+---
+# DTOs y Mappers
+
+- Los DTOs deben ser inmutables (`record` o `@Value`).
+- Usa `MapStruct` para convertir entre entidades y DTOs.
+- No incluir validaciones de negocio en los DTOs.
+- Convierte fechas a ISO-8601.

@@ -1,0 +1,12 @@
+---
+title: "API Endpoints"
+tags: [api, controller]
+alwaysApply: true
+---
+# Controladores REST
+
+- Todos los endpoints deben estar en `/api/v1/...`.
+- Usa `@RestController` y `@RequestMapping`.
+- No incluir lógica de negocio en los controladores.
+- Retornar `ResponseEntity<>` con tipos específicos.
+- Validar inputs con `@Valid` y `@NotNull`.

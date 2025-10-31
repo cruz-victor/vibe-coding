@@ -1,0 +1,14 @@
+---
+title: "Architecture Overview"
+description: "Definición de la arquitectura base del microservicio"
+tags: [architecture, layers]
+alwaysApply: true
+---
+# Arquitectura Base
+
+- Aplica **arquitectura en capas** o **puertos y adaptadores (hexagonal)**.
+- No hay dependencias cruzadas entre capas.
+- Las capas deben comunicarse solo hacia abajo.
+- `domain` no debe depender de `infrastructure` ni `api`.
+- Cada módulo debe poder ser probado y desplegado de forma independiente.
+- Los DTOs son usados únicamente en la capa `api`.

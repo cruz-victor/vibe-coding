@@ -1,0 +1,11 @@
+---
+title: "Business Logic"
+tags: [service, logic]
+alwaysApply: true
+---
+# Reglas de Negocio
+
+- La lógica debe residir en `@Service`.
+- No acceder directamente a repositorios desde controladores.
+- Mantén la lógica atómica y reutilizable.
+- Evita transacciones largas o múltiples escrituras innecesarias.
