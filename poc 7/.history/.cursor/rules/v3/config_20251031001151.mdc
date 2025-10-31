@@ -1,0 +1,11 @@
+---
+title: Configuration
+description: Security, logging, and application config
+tags: [config, security]
+alwaysApply: true
+---
+
+# Configuración
+- Configurar CORS y seguridad con `@Configuration`.
+- JWT o OAuth2 para autenticación.
+- Logging centralizado con `Slf4j`.

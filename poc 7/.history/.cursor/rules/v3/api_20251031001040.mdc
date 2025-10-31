@@ -1,0 +1,13 @@
+---
+title: API layer
+description: Rules for controllers, DTOs, and mappers
+tags: [api, controller, dto]
+alwaysApply: true
+---
+
+# Capa API
+- Controladores anotados con `@RestController`.
+- Prefijo de endpoints: `/api/v1/...`.
+- Métodos retornan `ResponseEntity`.
+- DTOs terminan con `Request` o `Response`.
+- MapStruct para mapeo Entity <-> DTO.

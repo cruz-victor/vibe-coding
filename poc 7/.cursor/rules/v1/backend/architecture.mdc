@@ -4,6 +4,7 @@ name: backend-architecture
 description: Reglas para la arquitectura limpia de los microservicios Java Spring Boot.
 tags: [architecture, clean-architecture, backend]
 alwaysApply: true
+enabled: true
 ---
 
 # 🧱 Arquitectura del Backend

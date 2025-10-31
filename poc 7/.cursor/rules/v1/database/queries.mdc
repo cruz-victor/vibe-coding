@@ -4,6 +4,7 @@ name: database-queries
 description: Buenas prácticas para consultas personalizadas y rendimiento.
 tags: [database, query, optimization]
 alwaysApply: true
+enabled: true
 ---
 
 # 🔍 Query Rules

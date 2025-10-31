@@ -1,0 +1,16 @@
+---
+extends: ./repository.mdc
+name: database-queries
+description: Buenas prácticas para consultas personalizadas y rendimiento.
+tags: [database, query, optimization]
+alwaysApply: true
+enabled: true
+---
+
+# 🔍 Query Rules
+
+- Optimiza consultas grandes usando `JOIN FETCH` en JPQL.
+- Limita el uso de `SELECT *`; especifica campos explícitamente.
+- Usa `@QueryHints` cuando sea necesario para mejorar rendimiento.
+- Usa `@SqlResultSetMapping` solo cuando sea absolutamente necesario.
+- Monitorea el número de queries con herramientas como `p6spy` o `Hibernate Statistics`.

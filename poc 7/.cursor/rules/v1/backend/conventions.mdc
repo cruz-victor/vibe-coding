@@ -4,6 +4,7 @@ name: backend-conventions
 description: Buenas prácticas generales para código backend en Spring Boot.
 tags: [conventions, code-style, backend]
 alwaysApply: true
+enabled: true
 ---
 
 # ⚙️ Convenciones de Código

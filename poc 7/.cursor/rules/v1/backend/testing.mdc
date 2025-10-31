@@ -4,6 +4,7 @@ name: backend-testing
 description: Reglas para pruebas unitarias e integración.
 tags: [testing, junit, mockito]
 alwaysApply: true
+enabled: true
 ---
 
 # 🧪 Testing Rules

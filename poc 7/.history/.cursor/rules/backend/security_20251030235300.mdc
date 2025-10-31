@@ -1,0 +1,17 @@
+---
+extends: ../global.mdc
+name: backend-security
+description: Políticas de seguridad y manejo de autenticación/autorización.
+tags: [security, spring-security, auth]
+alwaysApply: true
+enabled: true
+---
+
+# 🔒 Security Rules
+
+- Implementa **Spring Security** con autenticación JWT.
+- Usa `@PreAuthorize` o `@Secured` para control de acceso.
+- Las contraseñas deben encriptarse con `BCryptPasswordEncoder`.
+- Usa `@Valid` y anotaciones de validación en DTOs.
+- Nunca expongas información sensible en logs o excepciones.
+- Configura `CORS` solo para dominios específicos.

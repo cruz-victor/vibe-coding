@@ -1,0 +1,16 @@
+---
+extends: ../backend/conventions.mdc
+name: database-jpa
+description: Reglas de uso de JPA e Hibernate.
+tags: [database, jpa, hibernate]
+alwaysApply: true
+enabled: true
+---
+
+# 🗃️ JPA Rules
+
+- Todas las entidades deben tener `@Entity` y una columna `@Id`.
+- Usa `@GeneratedValue(strategy = GenerationType.IDENTITY)` por defecto.
+- Declara relaciones con `@OneToMany`, `@ManyToOne`, `@OneToOne`.
+- Evita `fetch = EAGER` en relaciones, usa `LAZY`.
+- Implementa `equals` y `hashCode` usando solo el ID.

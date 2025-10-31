@@ -4,6 +4,7 @@ name: backend-naming
 description: Convenciones de nombres para clases, paquetes y métodos en Spring Boot.
 tags: [naming, conventions, backend]
 alwaysApply: true
+enabled: true
 ---
 
 # 🔤 Naming Conventions

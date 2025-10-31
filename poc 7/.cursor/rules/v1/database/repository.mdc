@@ -4,6 +4,7 @@ name: database-repository
 description: Reglas para repositorios Spring Data JPA.
 tags: [database, repository, spring-data]
 alwaysApply: true
+enabled: true
 ---
 
 # 📚 Repository Rules

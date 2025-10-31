@@ -4,6 +4,7 @@ name: database-jpa
 description: Reglas de uso de JPA e Hibernate.
 tags: [database, jpa, hibernate]
 alwaysApply: true
+enabled: true
 ---
 
 # 🗃️ JPA Rules

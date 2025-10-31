@@ -1,0 +1,11 @@
+---
+title: Domain layer
+description: Entity and model rules
+tags: [domain, entity]
+alwaysApply: true
+---
+
+# Capa de Dominio
+- Entidades con `@Entity` y `@Table`.
+- Evitar lógica de negocio pesada en entidades.
+- Mantener modelos de dominio puros (sin dependencias de framework).

@@ -4,6 +4,7 @@ name: documentation
 description: Lineamientos para documentación técnica.
 tags: [docs, documentation]
 alwaysApply: true
+enabled: true
 ---
 
 # 📖 Documentation Rules

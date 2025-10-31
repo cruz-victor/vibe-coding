@@ -3,6 +3,7 @@ name: global-rules
 description: Reglas generales aplicables a todos los microservicios del sistema.
 tags: [global, backend, springboot, java]
 alwaysApply: true
+enabled: true
 ---
 
 # 🌐 Reglas Globales

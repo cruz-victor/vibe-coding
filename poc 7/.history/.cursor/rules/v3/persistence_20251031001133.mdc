@@ -1,0 +1,12 @@
+---
+title: Persistence layer
+description: Repository and database interaction rules
+tags: [persistence, repository]
+alwaysApply: true
+---
+
+# Capa de Persistencia
+- Repos extender `JpaRepository` o `MongoRepository`.
+- Métodos con nombres semánticos (`findByEmail`).
+- Sin lógica de negocio.
+- Consultas nativas solo si son estrictamente necesarias.

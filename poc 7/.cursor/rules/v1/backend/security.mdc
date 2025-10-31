@@ -4,6 +4,7 @@ name: backend-security
 description: Políticas de seguridad y manejo de autenticación/autorización.
 tags: [security, spring-security, auth]
 alwaysApply: true
+enabled: true
 ---
 
 # 🔒 Security Rules

@@ -1,0 +1,12 @@
+---
+title: Architecture overview
+description: Defines the layered architecture for all microservices
+tags: [architecture, clean-architecture]
+alwaysApply: true
+---
+
+# Arquitectura
+- Capas: API → Service → Domain → Persistence → Config.
+- Evitar dependencias cruzadas entre capas.
+- Usar interfaces para invertir dependencias.
+

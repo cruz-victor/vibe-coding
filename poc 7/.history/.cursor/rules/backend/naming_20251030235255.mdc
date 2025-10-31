@@ -1,0 +1,21 @@
+---
+extends: ../global.mdc
+name: backend-naming
+description: Convenciones de nombres para clases, paquetes y métodos en Spring Boot.
+tags: [naming, conventions, backend]
+alwaysApply: true
+enabled: true
+---
+
+# 🔤 Naming Conventions
+
+- Los servicios terminan en `Service` → `UserService`, `InvoiceService`.
+- Los controladores terminan en `Controller` → `UserController`, `PaymentController`.
+- Los repositorios terminan en `Repository` → `UserRepository`.
+- Los DTOs terminan en `Request` o `Response`.
+- Los paquetes son minúsculos y sin guiones:
+  - ✅ `com.empresa.usuario.service`
+  - ❌ `com.empresa.UsuarioService`
+- Los métodos deben comenzar con un verbo en minúscula:
+  - ✅ `findUserById()`
+  - ❌ `FindUserById()`

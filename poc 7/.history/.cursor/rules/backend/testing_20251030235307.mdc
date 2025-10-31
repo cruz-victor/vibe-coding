@@ -1,0 +1,17 @@
+---
+extends: ../global.mdc
+name: backend-testing
+description: Reglas para pruebas unitarias e integración.
+tags: [testing, junit, mockito]
+alwaysApply: true
+enabled: true
+---
+
+# 🧪 Testing Rules
+
+- Usa **JUnit 5** para pruebas unitarias.
+- Usa **Mockito** para mockear dependencias.
+- Los tests deben seguir el formato `given_when_then`.
+- Los métodos de test terminan en `Test`.
+- Evita probar componentes de Spring en tests unitarios.
+- Usa `@SpringBootTest` solo para pruebas de integración.

@@ -1,0 +1,8 @@
+projectName: smart-backend
+author: Vic CG
+language: Java
+framework: Spring Boot
+defaultRules: 
+  - global.mdc
+  - architecture.mdc
+  - api.mdc

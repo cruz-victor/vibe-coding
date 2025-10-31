@@ -4,6 +4,7 @@ name: readme-guidelines
 description: Guía para escribir archivos README coherentes.
 tags: [docs, readme]
 alwaysApply: true
+enabled: true
 ---
 
 # 📝 README Guidelines

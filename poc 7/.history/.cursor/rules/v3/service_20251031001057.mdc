@@ -1,0 +1,12 @@
+---
+title: Service layer
+description: Business logic conventions
+tags: [service, logic]
+alwaysApply: true
+---
+
+# Capa de Servicio
+- Anotar clases con `@Service`.
+- Usar `@RequiredArgsConstructor` para inyección.
+- No acceder a repositorios directamente desde controladores.
+- Métodos públicos claros y concisos.

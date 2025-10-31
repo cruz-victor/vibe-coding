@@ -1,0 +1,12 @@
+---
+title: Testing
+description: Unit and integration test guidelines
+tags: [testing, junit, mockito]
+alwaysApply: true
+---
+
+# Tests
+- Usa JUnit 5 y Mockito.
+- Nombres descriptivos: `shouldReturnX_whenY`.
+- Tests independientes y aislados.
+- Cobertura mínima 80%.

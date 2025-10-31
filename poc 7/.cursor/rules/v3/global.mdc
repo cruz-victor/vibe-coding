@@ -1,0 +1,12 @@
+---
+title: Global rules
+description: General standards for all backend code
+tags: [global]
+alwaysApply: true
+---
+
+# Reglas globales
+- Código en inglés.
+- Nombres descriptivos en CamelCase/PascalCase.
+- Usa logs, no `System.out.println`.
+- Clases con una sola responsabilidad.
