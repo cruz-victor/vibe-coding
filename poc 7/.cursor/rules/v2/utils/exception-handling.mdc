@@ -1,0 +1,23 @@
+---
+title: "Exception Handling"
+description: "Manejo uniforme de excepciones en todo el backend"
+tags: [utils, error, exception]
+alwaysApply: true
+---
+
+# Manejo de Excepciones
+
+- Centralizar manejo de errores con `@ControllerAdvice` y un `GlobalExceptionHandler`.
+- Definir una jerarquía de excepciones de dominio (`DomainException`, `NotFoundException`, `ValidationException`).
+- Mapear excepciones a códigos HTTP apropiados (404, 400, 409, 500).
+- No exponer mensajes internos ni stacktraces en respuestas al cliente.
+- Registrar errores con contexto suficiente (correlationId, userId si aplica).
+- Para errores esperados, devolver payload con estructura:
+  ```json
+  {
+    "timestamp": "...",
+    "status": 400,
+    "error": "Bad Request",
+    "message": "Detailed message",
+    "path": "/api/v1/..."
+  }

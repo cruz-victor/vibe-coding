@@ -1,0 +1,14 @@
+---
+title: "Mocks & Testcontainers"
+description: "Guía de uso de mocks y entornos de prueba con Testcontainers"
+tags: [testing, testcontainers, mocks]
+alwaysApply: true
+---
+
+# Mocks y Testcontainers
+
+- Usar Mockito para mocks unitarios y `@MockBean` para tests Spring slice.
+- Para pruebas de integración, preferir Testcontainers (Postgres, Kafka, Redis, etc.).
+- Mantener imágenes Testcontainers actualizadas y de tamaño razonable.
+- Evitar dependencias externas en tests locales: Testcontainers debe permitir reproducción local.
+- Documentar comandos para ejecutar tests en local con Testcontainers.

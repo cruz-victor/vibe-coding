@@ -1,0 +1,16 @@
+---
+title: "Database Strategy"
+description: "Estrategia unificada para acceso a datos (SQL / NoSQL) y buenas prácticas"
+tags: [persistence, database]
+alwaysApply: true
+---
+
+# Database Strategy
+
+- Decidir por servicio si usar RDBMS (Postgres, MySQL) o NoSQL (MongoDB) según necesidades de consistencia y consulta.
+- Para datos relacionales, usar JPA/Hibernate con `JpaRepository` y manejo explícito de transacciones en capa de servicio.
+- Para documentos, usar `MongoRepository` y diseñar document schemas inmutables cuando correspondan.
+- Mantener separación clara entre modelos de persistencia y modelos de dominio (mappers obligatorios).
+- Evitar queries nativas salvo por rendimiento crítico; documentar y justificar su uso.
+- Indexación: definir índices explícitos y documentar impacto en escritura/lectura.
+- Estrategia de backups y retención: documentada en `datasource-and-migrations.mdc`.

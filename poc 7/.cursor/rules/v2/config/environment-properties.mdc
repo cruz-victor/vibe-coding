@@ -1,0 +1,14 @@
+---
+title: "Environment Properties"
+description: "Guía para variables de entorno, secretos y configuración por entorno"
+tags: [config, env]
+alwaysApply: true
+---
+
+# Propiedades de Entorno
+
+- Listar todas las variables de entorno necesarias (DB_URL, DB_USER, DB_PASSWORD, JWT_SECRET, etc.).
+- Usar nombres claros: `SERVICE_<NAME>_DATABASE_URL`, `SERVICE_<NAME>_JDBC_MAX_POOL`.
+- Los secretos deben provenir de un gestor de secretos (Vault, AWS Secrets Manager, Kubernetes Secrets).
+- No versionar archivos `.env` con valores reales; incluir `.env.example` con variables comentadas.
+- Definir valores por defecto seguros para ambientes locales (dev) solo si no representan riesgo.

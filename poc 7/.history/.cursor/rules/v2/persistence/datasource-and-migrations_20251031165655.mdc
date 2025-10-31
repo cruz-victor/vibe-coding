@@ -1,0 +1,17 @@
+---
+title: "Datasource & Migrations"
+description: "Configuración de conexiones, pooling y estrategia de migraciones (Flyway/Liquibase)"
+tags: [persistence, migrations, datasource]
+alwaysApply: true
+---
+
+# Datasource y Migraciones
+
+- Configurar datasource mediante `spring.datasource.*` o `DataSource` beans con pooling (HikariCP).
+- Separar propiedades por entornos (dev/staging/prod) y no hardcodear credenciales.
+- Usar **Flyway** o **Liquibase** para versionar migraciones de esquema en RDBMS.
+  - Las migraciones deben ser idempotentes y pequeñas.
+  - Revisar migraciones en PR antes de merge.
+- Para MongoDB, versionar cambios de esquema con scripts de migración controlados o usar herramientas específicas.
+- Documentar procedimientos de rollback y prueba de migraciones en staging.
+- Validar migraciones en CI con base de datos temporal (Testcontainers).

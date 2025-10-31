@@ -1,0 +1,16 @@
+---
+title: "Domain Services"
+description: "Reglas y convenciones para Domain Services (servicios de dominio)"
+tags: [domain, service, domain-service]
+alwaysApply: true
+---
+
+# Domain Services
+
+- Los Domain Services representan operaciones del dominio que no encajan en una sola entidad.
+- Deben residir en el paquete `com.company.project.domain.service` o similar.
+- Deben ser *puros de dominio*: evitar dependencias directas a frameworks (Spring) en la lógica; inyectar adaptadores (ports) si es necesario.
+- Usar interfaces para definir los contratos del servicio de dominio.
+- Implementaciones concretas pueden ubicarse en `infrastructure` o `service/adapters` cuando interactúan con infra.
+- Documentar invariantes y efectos secundarios en JavaDoc.
+- Tests: cada Domain Service debe tener pruebas unitarias centradas en reglas del negocio (sin IoC ni base de datos).

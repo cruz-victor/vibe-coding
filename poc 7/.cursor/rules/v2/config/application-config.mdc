@@ -1,0 +1,15 @@
+---
+title: "Application Configuration"
+description: "Buenas prácticas para configuración de la aplicación (application.yml/properties)"
+tags: [config, application]
+alwaysApply: true
+---
+
+# Configuración de la Aplicación
+
+- Usar `application.yml` para valores por defecto y perfiles (`application-dev.yml`, `application-prod.yml`).
+- Preferir `@ConfigurationProperties` para agrupar propiedades relacionadas y validarlas.
+- Evitar lógica compleja en la carga de configuración.
+- No incluir secretos en ficheros versionados; usar Vault/Kubernetes Secrets/Environment variables.
+- Documentar propiedades críticas (con ejemplo) en un README de configuración o en `environment-properties.mdc`.
+- Habilitar profiles explícitos (`spring.profiles.active`) en despliegues.

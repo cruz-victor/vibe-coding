@@ -1,0 +1,13 @@
+---
+title: "Helpers and Constants"
+description: "Reglas para utilidades (helpers) y constantes del proyecto"
+tags: [utils, helpers, constants]
+---
+
+# Helpers y Constantes
+
+- Evitar clases utilitarias con mezcla de responsabilidades; preferir beans o funciones enfocadas.
+- Colocar constantes compartidas en paquetes `com.company.project.common` o `config`.
+- Preferir `enum` para tipos finitos en lugar de constantes `String`.
+- Helpers puros y testables: sin dependencia de Spring, para facilitar pruebas unitarias.
+- Documentar la razón de ser de cada helper y limitar su visibilidad (package-private si es posible).

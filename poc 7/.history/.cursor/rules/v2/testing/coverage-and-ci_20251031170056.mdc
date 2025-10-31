@@ -1,0 +1,15 @@
+---
+title: "Coverage and CI"
+description: "Políticas de cobertura, quality gates y ejecución en CI"
+tags: [ci, coverage, quality]
+alwaysApply: true
+---
+
+# Cobertura y CI
+
+- Cobertura mínima recomendada: **80%** en módulos críticos; aplicar excepciones justificadas.
+- Integrar Jacoco en el pipeline para generar métricas de cobertura.
+- Usar SonarQube/Cloud para quality gates (block merge si hay issues críticos).
+- Ejecutar pruebas unitarias e integración en CI en cada PR.
+- Ejecutar migraciones (Flyway) y pruebas contra base de datos temporal en etapas de CI.
+- Pipeline debe fallar si tests críticos fallan o quality gates no se cumplen.

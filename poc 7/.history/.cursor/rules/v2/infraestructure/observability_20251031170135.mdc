@@ -1,0 +1,15 @@
+---
+title: "Observability"
+description: "Métricas, logs y trazas para monitorizar el servicio"
+tags: [infra, observability, monitoring]
+alwaysApply: true
+---
+
+# Observabilidad
+
+- Logs estructurados (JSON) con al menos: timestamp, level, service, traceId, spanId, message.
+- Integrar métricas con Micrometer y exportar a Prometheus.
+- Instrumentar trazas con OpenTelemetry o Sleuth + Zipkin/Jaeger.
+- Exponer endpoints de health (`/actuator/health`) y metrics (`/actuator/prometheus`).
+- Definir SLAs y SLOs básicos: latencia p50/p95/p99, error rate.
+- Añadir guardrails para throttling y circuit breakers (Resilience4j).
