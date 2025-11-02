@@ -19,3 +19,4 @@ tags: [controller, api, rest, endpoints]
     PUT /{resource}/{id} → actualizar
     DELETE /{resource}/{id} → eliminar
 - Cada controlador debe manejar un solo recurso (ej: UserController, InvoiceController).
+- Cada controlador debe manejar un solo recurso (ej: UserController, InvoiceController).

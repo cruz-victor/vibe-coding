@@ -14,3 +14,4 @@ tags: [exception, error, handling, api, validation]
 - Incluir mensaje de error legible en la respuesta JSON.
 - Incluir `timestamp`, `path`, `message` y `status` en la respuesta.
 - Registrar errores con `Slf4j` y correlation ID si aplica.
+

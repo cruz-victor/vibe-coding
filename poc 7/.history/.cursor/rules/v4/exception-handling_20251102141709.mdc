@@ -6,11 +6,24 @@ tags: [exception, error, handling, api, validation]
 
 # Manejo de Excepciones
 
+- Implementar `@ControllerAdvice` + `@ExceptionHandler`.
+- Mapear excepciones específicas:
+  - `NotFoundException` → 404
+  - `ValidationException` → 400
+  - `ConflictException` → 409
+  - `InternalErrorException` → 500
+- No exponer trazas al cliente.
+- Incluir `timestamp`, `path`, `message` y `status` en la respuesta.
+- Registrar errores con `Slf4j` y correlation ID si aplica.
+
+
+name: 
+tags: []
+description: 
+---
 - Centralizar manejo global de errores con @ControllerAdvice.
 - Crear excepciones personalizadas por contexto (ej: ResourceNotFoundException).
 - Nunca exponer trazas de error al cliente.
 - Usar códigos HTTP apropiados: 400, 404, 500, etc.
 - Loguear todas las excepciones críticas con nivel ERROR.
 - Incluir mensaje de error legible en la respuesta JSON.
-- Incluir `timestamp`, `path`, `message` y `status` en la respuesta.
-- Registrar errores con `Slf4j` y correlation ID si aplica.

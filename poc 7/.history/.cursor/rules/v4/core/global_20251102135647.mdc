@@ -1,6 +1,6 @@
 ---
 title: "Global Backend Standards"
-description: "Reglas y convenciones generales para todos los microservicios del backend."
+description: "Reglas globales aplicables a todo el backend"
 tags: [core, global, architecture, style, backend]
 alwaysApply: true
 ---
@@ -11,13 +11,18 @@ alwaysApply: true
 - Estandar de codificación: seguir `Google Java Style` o `Spring conventions`.
 - Paquetización: usar estructura por capas (`controller`, `service`, `repository`, `entity`, `dto`, `utils`).
 - Logging con `Slf4j`.
-- Los logs deben usar el mismo formato estándar definido globalmente.
 - Evitar dependencias circulares entre capas.
 - Manejar errores de forma centralizada (ver `exception-handling.mdc`).
-- Todo servicio debe tener pruebas unitarias básicas.
+- Todos los módulos deben incluir pruebas unitarias.
+
+
+name: Global Rules
+tags: []
+description: Reglas y convenciones generales para todos los microservicios del backend.
+---
 - Mantener consistencia en nombres, convenciones y estructuras de paquetes.
 - Usar inglés en nombres de clases, métodos y variables.
 - Seguir principios SOLID y separación clara de responsabilidades.
-
-
-
+- Evitar dependencias circulares entre capas.
+- Todo servicio debe tener pruebas unitarias básicas.
+- Los logs deben usar el mismo formato estándar definido globalmente.

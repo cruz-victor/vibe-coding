@@ -1,0 +1,12 @@
+.cursor/
+└── rules/
+    ├── _core/
+    │   ├── global.mdc
+    │   └── architecture.mdc
+    ├── controllers.mdc
+    ├── services.mdc
+    ├── repositories.mdc
+    ├── entities.mdc
+    ├── dtos.mdc
+    ├── utils.mdc
+    └── exception-handling.mdc
