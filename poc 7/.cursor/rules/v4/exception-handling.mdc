@@ -1,0 +1,17 @@
+---
+title: "Exception Handling"
+description: "Manejo centralizado de errores en la aplicación"
+tags: [exception, error, handling]
+---
+
+# Manejo de Excepciones
+
+- Implementar `@ControllerAdvice` + `@ExceptionHandler`.
+- Mapear excepciones específicas:
+  - `NotFoundException` → 404
+  - `ValidationException` → 400
+  - `ConflictException` → 409
+  - `InternalErrorException` → 500
+- No exponer trazas al cliente.
+- Incluir `timestamp`, `path`, `message` y `status` en la respuesta.
+- Registrar errores con `Slf4j` y correlation ID si aplica.

@@ -1,0 +1,16 @@
+---
+title: "Global Backend Standards"
+description: "Reglas globales aplicables a todo el backend"
+tags: [core, global]
+alwaysApply: true
+---
+
+# Reglas Globales
+
+- Lenguaje: Java 17+ (o superior).
+- Estandar de codificación: seguir `Google Java Style` o `Spring conventions`.
+- Paquetización: usar estructura por capas (`controller`, `service`, `repository`, `entity`, `dto`, `utils`).
+- Logging con `Slf4j`.
+- Evitar dependencias circulares entre capas.
+- Manejar errores de forma centralizada (ver `exception-handling.mdc`).
+- Todos los módulos deben incluir pruebas unitarias.

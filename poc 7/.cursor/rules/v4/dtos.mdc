@@ -1,0 +1,14 @@
+---
+title: "DTO Rules"
+description: "Convenciones para Data Transfer Objects (DTO)"
+tags: [dto, data, mapper]
+---
+
+# DTOs
+
+- Ubicación: `com.company.project.dto`.
+- Usar `record` o clases inmutables (`@Value` de Lombok).
+- Validar campos con anotaciones (`@NotNull`, `@Email`, etc.).
+- No incluir lógica de negocio.
+- Convertir entre Entity ↔ DTO con un mapper dedicado (MapStruct recomendado).
+- Mantener DTOs ligeros: solo datos requeridos por la vista o API.

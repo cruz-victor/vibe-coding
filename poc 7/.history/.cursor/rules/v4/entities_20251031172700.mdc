@@ -1,0 +1,16 @@
+---
+title: "Entities Rules"
+description: "Reglas para diseño de entidades JPA"
+tags: [entity, model]
+---
+
+# Entities
+
+- Ubicación: `com.company.project.entity`.
+- Anotar con `@Entity` y `@Table(name="...")`.
+- Usar `@Id` con `@GeneratedValue(strategy = GenerationType.IDENTITY)` o UUID.
+- Evitar lógica de negocio dentro de las entidades.
+- Implementar `equals()` y `hashCode()` solo por ID.
+- Marcar relaciones con `@OneToMany`, `@ManyToOne`, etc., con `fetch = LAZY`.
+- Evitar referencias bidireccionales innecesarias.
+- Evitar serialización directa de entidades en API.

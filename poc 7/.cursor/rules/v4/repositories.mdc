@@ -1,0 +1,15 @@
+---
+title: "Repository Rules"
+description: "Reglas para la capa de persistencia (JPA, MongoDB)"
+tags: [repository, persistence]
+---
+
+# Repositories
+
+- Ubicación: `com.company.project.repository`.
+- Usar `JpaRepository`, `CrudRepository` o `MongoRepository`.
+- No agregar lógica de negocio; solo acceso a datos.
+- Nombres de métodos deben seguir convención de Spring Data: findByName, findByStatusAndType, existsByEmail
+- Consultas personalizadas con `@Query` solo cuando sea necesario.
+- Evitar dependencias circulares con servicios.
+- Controlar transacciones desde capa de servicio.

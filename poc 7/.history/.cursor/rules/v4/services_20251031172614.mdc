@@ -1,0 +1,16 @@
+---
+title: "Service Layer Rules"
+description: "Buenas prácticas para la capa de servicios"
+tags: [service, business-logic]
+---
+
+# Services
+
+- Ubicación: `com.company.project.service`.
+- Anotación: `@Service` o `@Component`.
+- Cada servicio debe tener una interfaz (`XService`) y su implementación (`XServiceImpl`).
+- Responsabilidad única: cada servicio representa una unidad funcional del dominio.
+- Inyectar repositorios con constructor (`@RequiredArgsConstructor`).
+- No realizar lógica de persistencia directa.
+- Manejar transacciones con `@Transactional` (solo cuando involucre cambios en BD).
+- Validar datos antes de persistirlos (puede usar `javax.validation` o reglas custom).

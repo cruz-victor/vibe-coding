@@ -1,0 +1,17 @@
+---
+title: "Backend Architecture"
+description: "Definición de arquitectura por capas del backend"
+tags: [architecture, backend]
+alwaysApply: true
+---
+
+# Arquitectura en Capas
+
+- Capas principales:
+  - **Controller** → recibe peticiones HTTP.
+  - **Service** → implementa lógica de negocio.
+  - **Repository** → maneja acceso a datos (JPA/Mongo).
+  - **Entity** → define el modelo persistente.
+  - **DTO** → define contratos de entrada/salida.
+  - **Utils** → utilidades generales.
+- Cada capa solo debe comunicarse con la inmediatamente inferior:

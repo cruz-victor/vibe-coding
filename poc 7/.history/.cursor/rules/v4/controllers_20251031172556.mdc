@@ -1,0 +1,20 @@
+---
+title: "Controllers Rules"
+description: "Buenas prácticas y convenciones para controladores REST"
+tags: [controller, api, rest]
+---
+
+# Controllers
+
+- Los controladores deben ubicarse en `com.company.project.controller`.
+- Usar `@RestController` y prefijar rutas con `/api/v1/...`.
+- Métodos deben devolver `ResponseEntity<T>` o tipos reactivos si aplica.
+- Validar entrada con `@Valid` y `@Validated`.
+- No incluir lógica de negocio; delegar a `service`.
+- Manejar excepciones con `@ControllerAdvice` (ver `exception-handling.mdc`).
+- Convención de rutas:
+    GET /{resource} → listar
+    GET /{resource}/{id} → obtener por ID
+    POST /{resource} → crear
+    PUT /{resource}/{id} → actualizar
+    DELETE /{resource}/{id} → eliminar

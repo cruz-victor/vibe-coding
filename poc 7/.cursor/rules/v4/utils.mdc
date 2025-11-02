@@ -1,0 +1,13 @@
+---
+title: "Utils Rules"
+description: "Reglas para clases de utilidad, constantes y helpers"
+tags: [utils, helper]
+---
+
+# Utils
+
+- Ubicación: `com.company.project.util`.
+- Helpers deben ser estáticos, sin estado, y contener funciones puras.
+- Agrupar constantes en clases dedicadas (`ErrorMessages`, `AppConstants`, etc.).
+- Evitar clases genéricas de propósito múltiple.
+- No usar helpers para esconder dependencias del framework.
