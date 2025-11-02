@@ -3,6 +3,7 @@ title: "Controllers"
 description: "Reglas para controladores REST: estructura, rutas y responsabilidades."
 tags: [api, controller]
 appliesTo: ["src/main/java/**/controller/**"]
+alwaysApply: true
 ---
 
 # Controllers rules

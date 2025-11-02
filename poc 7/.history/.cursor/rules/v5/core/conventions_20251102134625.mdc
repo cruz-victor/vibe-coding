@@ -2,6 +2,7 @@
 title: "Conventions"
 description: "Nombres, paquetes, commits y estilo de código."
 tags: [core, conventions]
+alwaysApply: true
 ---
 
 # Naming & style conventions
